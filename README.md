@@ -1,3 +1,7 @@
 # phabservlet
 
-Servlet to contain a database of products for PHAB PHarmacy
+Servlet containing a database of products for PHAB Pharmacy
+
+
+https://phabservlet.herokuapp.com/drugstock
+https://phabservlet.herokuapp.com/druglist
