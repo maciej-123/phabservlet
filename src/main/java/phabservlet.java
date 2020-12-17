@@ -22,27 +22,10 @@ public class phabservlet extends HttpServlet {
 
         //ResultSet result = statement.executeQuery(sql);
 
-        FileReader fr = new FileReader("postgres_public_test_database.sql") ;
+        String sqlfile = "postgres_public_test_database.sql";
 
-
-        //     https://www.journaldev.com/875/java-read-file-to-string#:~:text=
-        //     Java%20read%20file%20to%20String%20using%20BufferedReader,-We%20
-        //     can%20use&text=BufferedReader%20reader%20%3D%20new%20BufferedReader(new,readLine())%20!%3D
-
-
-        BufferedReader reader = new BufferedReader(fr);
-        StringBuilder stringBuilder = new StringBuilder();
-        String line = null;
-        String ls = System.getProperty("line.separator");
-        while ((line = reader.readLine()) != null) {
-            stringBuilder.append(line);
-            stringBuilder.append(ls);
-        }
-        stringBuilder.deleteCharAt(stringBuilder.length() - 1);
-        reader.close();
-        String content = stringBuilder.toString();
-
-        resp.getWriter().write(content);
+        convertFiletoString FtoS = new convertFiletoString(sqlfile);
+        resp.getWriter().write(FtoS.getStringOutput());
 
 
         }

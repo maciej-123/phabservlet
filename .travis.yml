@@ -12,6 +12,6 @@ cache:
     - $HOME/.gradle/wrapper/
 deploy:
   provider: heroku
-  api_key: 54aae3ed-eb54-4046-9faf-542e280af8e1
+  api_key: 7cf56211-b65d-41cd-b7b1-152f3aafb03f
   app: phabservlet
   skip_cleanup: true
