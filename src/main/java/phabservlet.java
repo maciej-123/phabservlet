@@ -26,7 +26,7 @@ public class phabservlet extends HttpServlet {
 
         convertFiletoString FtoS = new convertFiletoString(sqlfile);
         resp.getWriter().write(FtoS.getStringOutput());
-            resp.getWriter().write("test");
+            resp.getWriter().write("TEST");
 
         }
 
