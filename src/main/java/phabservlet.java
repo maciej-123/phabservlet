@@ -32,6 +32,7 @@ public class phabservlet extends HttpServlet {
 
         if(ending.equals("/drugstock")) {
             resp.getWriter().write("<b>Drug Stock</b>");
+            resp.getWriter().write(" TEST ");
         }
 
 
